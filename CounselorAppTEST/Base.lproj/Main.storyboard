@@ -134,7 +134,7 @@
             <objects>
                 <viewController id="5xH-rS-EfE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2S-V0-zwZ">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1030"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="DME-oq-x53">
@@ -163,8 +163,23 @@
                     <view key="view" contentMode="scaleToFill" id="hS7-xd-Kwt">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="students list" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-xs-btL">
+                                <rect key="frame" x="0.0" y="50" width="810" height="980"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GTU-oS-ar2" appends="YES" id="aCq-cB-i00"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="GVF-xs-btL" firstAttribute="leading" secondItem="di3-tK-YvD" secondAttribute="leading" id="aRq-SU-8KP"/>
+                            <constraint firstItem="di3-tK-YvD" firstAttribute="bottom" secondItem="GVF-xs-btL" secondAttribute="bottom" id="lGC-G0-N0g"/>
+                            <constraint firstItem="di3-tK-YvD" firstAttribute="trailing" secondItem="GVF-xs-btL" secondAttribute="trailing" id="n9N-XG-Ikc"/>
+                            <constraint firstItem="GVF-xs-btL" firstAttribute="top" secondItem="di3-tK-YvD" secondAttribute="top" id="yiS-4u-0AX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="di3-tK-YvD"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Xk5-Fd-2mP" appends="YES" id="Sy9-lP-egd"/>
@@ -178,6 +193,11 @@
                 <tapGestureRecognizer id="Xk5-Fd-2mP">
                     <connections>
                         <segue destination="jQw-BL-eiW" kind="show" id="uGQ-vR-HGO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GTU-oS-ar2">
+                    <connections>
+                        <segue destination="5xH-rS-EfE" kind="show" id="4Hy-iD-clp"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -272,10 +292,12 @@
         <image name="message" width="762" height="417"/>
         <image name="message inbox" width="764" height="419"/>
         <image name="second" width="30" height="30"/>
+        <image name="students list" width="199" height="267"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UEw-M0-GV2"/>
-        <segue reference="Wea-6d-Ncl"/>
+        <segue reference="uGQ-vR-HGO"/>
+        <segue reference="GHM-cH-cra"/>
+        <segue reference="4Hy-iD-clp"/>
         <segue reference="if2-Ky-cNS"/>
     </inferredMetricsTieBreakers>
 </document>
