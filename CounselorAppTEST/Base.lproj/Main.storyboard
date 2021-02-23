@@ -107,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="No, continue"/>
                                 <connections>
-                                    <segue destination="CN8-Vr-oFK" kind="show" id="GHM-cH-cra"/>
+                                    <segue destination="BND-Ur-aNO" kind="show" id="2hl-qr-nRC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is this the group you would like to send a message to or continue going through groups?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsz-ia-N8h">
@@ -130,11 +130,47 @@
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="y9e-kO-N4C">
+            <objects>
+                <viewController id="BND-Ur-aNO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dli-MZ-WOB">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1030"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="students list" translatesAutoresizingMaskIntoConstraints="NO" id="30d-tb-aER">
+                                <rect key="frame" x="0.0" y="50" width="810" height="980"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0oK-Ez-U3q" appends="YES" id="6EF-ck-Jiy"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="30d-tb-aER" firstAttribute="top" secondItem="IAU-0x-puf" secondAttribute="top" id="UNG-sE-nSz"/>
+                            <constraint firstItem="30d-tb-aER" firstAttribute="leading" secondItem="IAU-0x-puf" secondAttribute="leading" id="c6h-PP-jnb"/>
+                            <constraint firstItem="IAU-0x-puf" firstAttribute="bottom" secondItem="30d-tb-aER" secondAttribute="bottom" id="fft-v6-0Yg"/>
+                            <constraint firstItem="IAU-0x-puf" firstAttribute="trailing" secondItem="30d-tb-aER" secondAttribute="trailing" id="nh6-ZH-CnU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IAU-0x-puf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dAB-rd-ir7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpi-Yk-hFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0oK-Ez-U3q">
+                    <connections>
+                        <segue destination="AO5-e6-a9m" kind="show" id="yq2-LZ-rxb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1629" y="401"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="8eb-Rf-0We">
             <objects>
                 <viewController id="5xH-rS-EfE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2S-V0-zwZ">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="DME-oq-x53">
@@ -154,46 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77G-rR-Kng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="1021"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="XVy-Wj-dIc">
-            <objects>
-                <viewController id="CN8-Vr-oFK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hS7-xd-Kwt">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="students list" translatesAutoresizingMaskIntoConstraints="NO" id="GVF-xs-btL">
-                                <rect key="frame" x="0.0" y="50" width="810" height="980"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GTU-oS-ar2" appends="YES" id="aCq-cB-i00"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="GVF-xs-btL" firstAttribute="leading" secondItem="di3-tK-YvD" secondAttribute="leading" id="aRq-SU-8KP"/>
-                            <constraint firstItem="di3-tK-YvD" firstAttribute="bottom" secondItem="GVF-xs-btL" secondAttribute="bottom" id="lGC-G0-N0g"/>
-                            <constraint firstItem="di3-tK-YvD" firstAttribute="trailing" secondItem="GVF-xs-btL" secondAttribute="trailing" id="n9N-XG-Ikc"/>
-                            <constraint firstItem="GVF-xs-btL" firstAttribute="top" secondItem="di3-tK-YvD" secondAttribute="top" id="yiS-4u-0AX"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="di3-tK-YvD"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="C0l-en-lBv"/>
-                    <navigationItem key="navigationItem" id="2vH-v2-9vQ"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jcx-ZQ-O3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GTU-oS-ar2">
-                    <connections>
-                        <segue destination="5xH-rS-EfE" kind="show" id="4Hy-iD-clp"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1546" y="317"/>
+            <point key="canvasLocation" x="1629" y="1115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VWD-fT-FcW">
@@ -252,7 +249,6 @@
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="jQw-BL-eiW" kind="relationship" relationship="viewControllers" id="UEw-M0-GV2"/>
-                        <segue destination="CN8-Vr-oFK" kind="relationship" relationship="viewControllers" id="Wea-6d-Ncl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -277,6 +273,60 @@
             </objects>
             <point key="canvasLocation" x="-22.222222222222221" y="-726.11111111111109"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="v2h-IO-lzT">
+            <objects>
+                <viewController id="5Fd-Ea-IoP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQU-yq-NkL">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="19g-Ei-7sl">
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="19g-Ei-7sl" firstAttribute="leading" secondItem="UOa-2A-R9d" secondAttribute="leading" id="0wP-nd-YhP"/>
+                            <constraint firstItem="UOa-2A-R9d" firstAttribute="bottom" secondItem="19g-Ei-7sl" secondAttribute="bottom" id="DFY-lk-r3y"/>
+                            <constraint firstItem="19g-Ei-7sl" firstAttribute="top" secondItem="UOa-2A-R9d" secondAttribute="top" id="bHY-vN-ycR"/>
+                            <constraint firstItem="UOa-2A-R9d" firstAttribute="trailing" secondItem="19g-Ei-7sl" secondAttribute="trailing" id="yXK-Dt-7lh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UOa-2A-R9d"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4DS-B8-QHH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klq-wd-jbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="1115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ROh-vG-1bc">
+            <objects>
+                <viewController id="AO5-e6-a9m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vtg-qs-KGg">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1030"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-rl-50Q">
+                                <rect key="frame" x="0.0" y="49.999999999999943" width="810" height="980.00000000000011"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jPp-9O-17t" firstAttribute="trailing" secondItem="ifQ-rl-50Q" secondAttribute="trailing" id="9bz-4O-IvE"/>
+                            <constraint firstItem="ifQ-rl-50Q" firstAttribute="leading" secondItem="jPp-9O-17t" secondAttribute="leading" id="CXD-GB-J7Q"/>
+                            <constraint firstItem="jPp-9O-17t" firstAttribute="bottom" secondItem="ifQ-rl-50Q" secondAttribute="bottom" id="O2m-2V-GtY"/>
+                            <constraint firstItem="ifQ-rl-50Q" firstAttribute="top" secondItem="jPp-9O-17t" secondAttribute="top" id="cx3-1z-UWi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jPp-9O-17t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NgF-MS-f0i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6t-dz-v9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="1081"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ipad1" width="374" height="424"/>
@@ -287,8 +337,6 @@
         <image name="students list" width="199" height="267"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GHM-cH-cra"/>
-        <segue reference="4Hy-iD-clp"/>
         <segue reference="if2-Ky-cNS"/>
     </inferredMetricsTieBreakers>
 </document>
