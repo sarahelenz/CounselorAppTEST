@@ -181,20 +181,12 @@
                             <constraint firstItem="GVF-xs-btL" firstAttribute="top" secondItem="di3-tK-YvD" secondAttribute="top" id="yiS-4u-0AX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="di3-tK-YvD"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Xk5-Fd-2mP" appends="YES" id="Sy9-lP-egd"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="C0l-en-lBv"/>
                     <navigationItem key="navigationItem" id="2vH-v2-9vQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcx-ZQ-O3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Xk5-Fd-2mP">
-                    <connections>
-                        <segue destination="jQw-BL-eiW" kind="show" id="uGQ-vR-HGO"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="GTU-oS-ar2">
                     <connections>
                         <segue destination="5xH-rS-EfE" kind="show" id="4Hy-iD-clp"/>
@@ -295,7 +287,6 @@
         <image name="students list" width="199" height="267"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uGQ-vR-HGO"/>
         <segue reference="GHM-cH-cra"/>
         <segue reference="4Hy-iD-clp"/>
         <segue reference="if2-Ky-cNS"/>
