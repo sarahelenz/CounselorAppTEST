@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="b1J-0o-N1c"/>
+                                    <segue destination="pys-iv-dMr" kind="show" id="b1J-0o-N1c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,22 +40,22 @@
             </objects>
             <point key="canvasLocation" x="-22" y="-726"/>
         </scene>
-        <!--Item-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="9pv-A4-QxB" customClass="FirstViewController" customModule="CounselorAppTEST" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.92005640964362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="900.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="280.5" y="424" width="151" height="109"/>
+                                <rect key="frame" x="280.5" y="424" width="151" height="52.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="259" y="541" width="194.5" height="17"/>
+                                <rect key="frame" x="259" y="484.5" width="194.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -64,6 +64,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Cpf-P4-tNZ" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="0Ay-3D-f2e"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
@@ -75,37 +76,45 @@
                             <constraint firstItem="Cpf-P4-tNZ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="pG8-sg-Rat"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4E9-2D-87U" appends="YES" id="1cl-H7-FJg"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="k3z-fi-4gi"/>
                     <navigationItem key="navigationItem" id="uwh-V7-asa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4E9-2D-87U">
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="show" id="if2-Ky-cNS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="749.62962962962956" y="-320"/>
+            <point key="canvasLocation" x="1506.6666666666665" y="-320"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="CounselorAppTEST" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="956.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="304" y="518.5" width="202" height="43"/>
+                                <rect key="frame" x="255" y="457" width="202" height="43"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="297.5" y="569.5" width="215" height="17"/>
+                                <rect key="frame" x="248.5" y="508" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
@@ -113,10 +122,19 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VgB-QT-J58" appends="YES" id="8D8-bH-kha"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="Ksc-iF-9hc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VgB-QT-J58">
+                    <connections>
+                        <segue destination="CN8-Vr-oFK" kind="show" id="Du1-9N-T7Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
@@ -125,15 +143,25 @@
             <objects>
                 <viewController id="CN8-Vr-oFK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hS7-xd-Kwt">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="di3-tK-YvD"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xk5-Fd-2mP" appends="YES" id="Sy9-lP-egd"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="C0l-en-lBv"/>
+                    <navigationItem key="navigationItem" id="2vH-v2-9vQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcx-ZQ-O3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xk5-Fd-2mP">
+                    <connections>
+                        <segue destination="jQw-BL-eiW" kind="show" id="uGQ-vR-HGO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1546" y="317"/>
         </scene>
@@ -142,17 +170,18 @@
             <objects>
                 <viewController id="jQw-BL-eiW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpG-Kh-RE7">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bPX-gu-HGO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="wep-zH-yvd"/>
+                    <navigationItem key="navigationItem" id="xRc-2s-87J"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQW-R3-YaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="-323"/>
+            <point key="canvasLocation" x="2302.9629629629626" y="-323.33333333333331"/>
         </scene>
         <!--View-->
         <scene sceneID="yl2-sM-qoP">
@@ -164,7 +193,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="pys-iv-dMr" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="jQw-BL-eiW" kind="relationship" relationship="viewControllers" id="UEw-M0-GV2"/>
                         <segue destination="CN8-Vr-oFK" kind="relationship" relationship="viewControllers" id="Wea-6d-Ncl"/>
@@ -174,6 +203,26 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="nch-sV-DK4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pys-iv-dMr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="k3z-fi-4gi"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Yln-IZ-WZ2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U25-46-hlG">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="1B8-zP-O8b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0y-mZ-14M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.62962962962956" y="-320"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ipad1" width="374" height="424"/>
@@ -182,5 +231,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b1J-0o-N1c"/>
+        <segue reference="uGQ-vR-HGO"/>
+        <segue reference="Du1-9N-T7Y"/>
+        <segue reference="if2-Ky-cNS"/>
     </inferredMetricsTieBreakers>
 </document>
